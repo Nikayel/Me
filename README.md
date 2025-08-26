@@ -23,29 +23,4 @@
 ---
 
 ⭐️ From nikayel(https://github.com/Nikayel)
-name: Generate Snake
-
-
-on:
-schedule:
-- cron: "0 0 * * *" # daily
-workflow_dispatch:
-
-
-jobs:
-build:
-runs-on: ubuntu-latest
-steps:
-- name: Generate snake.svg
-uses: Platane/snk@v3
-with:
-github_user_name: YOUR_GITHUB_USERNAME
-outputs: |
-dist/snake.svg
-- name: Upload to GitHub Pages
-uses: crazy-max/ghaction-github-pages@v4
-with:
-target_branch: gh-pages
-build_dir: dist
-env:
-GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+![](https://komarev.com/ghpvc/?username=YOUR_GITHUB_USERNAME&style=flat-square)
